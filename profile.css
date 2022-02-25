@@ -1,0 +1,579 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#menu img {
+  width: 20px;
+  height: 20px;
+}
+/*<dark_mode>*/
+:root {
+
+  --primary-color: #fff;
+  --secondary-color: #191919;
+
+}
+
+.dark-mode {
+  --primary-color: #191919;
+  --secondary-color: #fff;
+}
+
+#icon {
+  cursor: pointer;
+  color: var(--secondary-color);
+}
+/*</dark_mode>*/
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-size: 100%;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 14px;
+  	font-weight: normal;
+  	height: 100%;
+  	background-color: var(--primary-color);
+  	background-size: cover;
+  	background-attachment: fixed;
+}
+
+
+/*moving circles*/
+.square{
+  margin: 60px auto;
+  position: relative;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.square span:nth-child(1){
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /*border: 2px solid var(--secondary-color);*/
+  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+  transition: animate 6s linear infinite;
+  background: #2DA8D8FF;
+}
+.square span:nth-child(2){
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /*border: 2px solid var(--secondary-color);*/
+  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+  transition: 0.5s;
+  animation: animate 4s linear infinite;
+  background: #F4B41A;  /*2A2B2DFF*/
+}
+.square span:nth-child(3){
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--primary-color);
+  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+  transition: 0.5s;
+  animation: animate 10s linear infinite;
+  background: #D9514EFF;
+}
+
+
+
+@keyframes animate {
+  0%
+  {
+    transform: rotate(360deg);
+  }
+  100%
+  {
+    transform: rotate(0deg);
+  }
+}
+
+.content{
+  position: relative;
+  padding: 40px 60px;
+  color: var(--primary-color);
+  text-align: center;
+  transition: 0.5s;
+  z-index: 1000;
+}
+/*
+.content h2, p{
+  color: var(--primary-color);
+}
+*/
+.content a{
+  position: relative;
+  display: inline-block;
+  margin-top: 10px;
+  border: 2px solid var(--primary-color);
+  padding: 6px 18px;
+  text-decoration: none;  /*u can do cross line over txt i think*/
+  color: var(--primary-color);
+  font-weight: 600;
+  border-radius: 73% 27% 44% 56% / 49% 44% 56% 51%;
+}
+.content a:hover{
+  background: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+
+
+
+
+
+
+/*moving circles 2*/
+.square2{
+  margin: 60px auto;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.square2 span:nth-child(1){
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--secondary-color);
+  border-radius: 100%;
+  transition: animate 6s linear infinite;
+  /*background: #2DA8D8FF;*/
+}
+.square2 span:nth-child(2){
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--secondary-color);
+  border-radius: 50px;
+  transition: 0.5s;
+  animation: animate 4s linear infinite;
+  /*background: #F4B41A;  or  2A2B2DFF*/
+}
+.square2 span:nth-child(3){
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--secondary-color);
+  border-radius: 100px;
+  transition: 0.5s;
+  animation: animate 10s linear infinite;
+  /*background: #D9514EFF;*/
+}
+
+.content2{
+  position: relative;
+  padding: 40px 60px;
+  color: var(--secondary-color);
+  text-align: center;
+  transition: 0.5s;
+  z-index: 1000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*header_menu*/
+div, section, span, ul, li, a, header{
+    box-sizing: border-box;
+
+}
+
+
+header{
+    width: 100%;
+    display: block;
+}
+
+.inner_header{
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+.inner_header ul{
+  list-style: none;
+  text-align: right;
+  margin: 11px;
+  padding-right: 11px;
+}
+.inner_header li{
+  display: inline-block;
+}
+.inner_header a{
+  text-decoration: none;
+  color: var(--secondary-color);
+  width: auto;  /*to center when shrinking screen*/
+  display: block;
+  padding: 0;
+  font-size: 17px;
+  font-family: 'Roboto Mono', monospace;
+}
+.inner_header a:hover{
+  background: var(--secondary-color);  /*box color when hovering over*/
+  color: var(--primary-color);
+  transition: 0.4s;
+}
+.inner_header ul switch{
+    float: left;
+}
+
+
+
+/*EYES*/
+
+.eyes{
+  position: absolute;
+  top: 13%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+}
+.eye{
+  width: 130px;
+  height: 120px;
+  background: #fff;
+  display: inline-block;
+  margin: 40px;
+  border: 2px solid var(--secondary-color);
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 7px 21px;
+}
+
+.ball{
+  width: 40px;
+  height: 40px;
+  background: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
+  border: 15px solid #333;
+  box-shadow: 0px 10px 13px;
+}
+
+
+
+/*quizzes box*/
+.quiz-box{
+  width: auto;
+  height: 480px;
+  position: relative;
+  margin: 6% 11%;
+  background: var(--primary-color);
+  padding: 5px;
+  /*box-shadow: 0px 10px 21px;*/
+  overflow: hidden;
+  border-radius: 50px 21px;
+  border: 2px solid var(--secondary-color);
+}
+
+.quiz-box h1{
+  text-align: center;
+  padding-top: 11%;
+  color: var(--secondary-color);
+}
+
+
+
+/*quiz icons*/
+.icons ul {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.icons ul li {
+    list-style: none;
+    margin: 0 10px;
+}
+.icons ul li .fa {
+    color: #000000;
+    font-size: 25px;
+    line-height: 50px;
+    transition: .5s;
+}
+.icons ul li .fa:hover {
+    color: var(--primary-color);
+}
+.icons ul li a {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 11px;
+    border: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    transition: 0.5s;
+    transform: translate(0,0px);
+    /*box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);*/
+    text-decoration: none;
+    font-family: 'Roboto Mono', monospace;
+
+}
+.icons ul li a:hover {
+    transform: rotate(0deg) skew(0deg) translate(0, -10px);
+}
+.icons ul li:nth-child(1) a:hover {
+    background-color: #3b5999;
+}
+.icons ul li:nth-child(2) a:hover {
+    background-color: #55acee;
+}
+.icons ul li:nth-child(3) a:hover {
+    background-color: #e4405f;
+}
+.icons ul li:nth-child(4) a:hover {
+    background-color: #cd201f;
+}
+.icons ul li:nth-child(5) a:hover {
+    background-color: #0077B5;
+}
+/******************************/
+/*icons2*/
+.icons2 ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.icons2 ul li {
+    list-style: none;
+    margin: 0 10px;
+}
+.icons2 ul li .fa {
+    color: #000000;
+    font-size: 25px;
+    line-height: 50px;
+    transition: .5s;
+}
+.icons2 ul li .fa:hover {
+    color: var(--primary-color);
+}
+.icons2 ul li a {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 11px;
+    border: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    transition: 0.5s;
+    transform: translate(0,0px);
+    /*box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);*/
+    text-decoration: none;
+    font-family: 'Roboto Mono', monospace;
+
+}
+.icons2 ul li a:hover {
+    transform: rotate(0deg) skew(0deg) translate(0, -10px);
+}
+.icons2 ul li:nth-child(1) a:hover {
+    background-color: #3b5999;
+}
+.icons2 ul li:nth-child(2) a:hover {
+    background-color: #55acee;
+}
+.icons2 ul li:nth-child(3) a:hover {
+    background-color: #e4405f;
+}
+.icons2 ul li:nth-child(4) a:hover {
+    background-color: #cd201f;
+}
+.icons2 ul li:nth-child(5) a:hover {
+    background-color: #0077B5;
+}
+/*********************************/
+/*icons2*/
+.icons3 ul {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.icons3 ul li {
+    list-style: none;
+    margin: 0 10px;
+}
+.icons3 ul li .fa {
+    color: #000000;
+    font-size: 25px;
+    line-height: 50px;
+    transition: .5s;
+}
+.icons3 ul li .fa:hover {
+    color: var(--primary-color);
+}
+.icons3 ul li a {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 11px;
+    border: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    transition: 0.5s;
+    transform: translate(0,0px);
+    /*box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);*/
+    text-decoration: none;
+    font-family: 'Roboto Mono', monospace;
+
+}
+.icons3 ul li a:hover {
+    transform: rotate(0deg) skew(0deg) translate(0, -10px);
+}
+.icons3 ul li:nth-child(1) a:hover {
+    background-color: #3b5999;
+}
+.icons3 ul li:nth-child(2) a:hover {
+    background-color: #55acee;
+}
+.icons3 ul li:nth-child(3) a:hover {
+    background-color: #e4405f;
+}
+.icons3 ul li:nth-child(4) a:hover {
+    background-color: #cd201f;
+}
+.icons3 ul li:nth-child(5) a:hover {
+    background-color: #0077B5;
+}
+
+
+
+/****************************************************************************/
+/*quiz text*/
+
+.line h1 {
+  padding-top: 400px;
+}
+/****************************************************************************/
+
+
+/*SCORE*/
+.score-box{
+  width: auto;
+  height: 480px;
+  position: relative;
+  margin: 6% 11%;
+  padding: 50px;
+
+}
+
+
+/*up & down buttons*/
+.up a{
+  background: transparent;
+  width: 50%;
+  float: right;
+  padding: 10px;
+  text-align: right;
+  text-decoration: none;
+  color: var(--secondary-color);
+  width: auto;  /*to center when shrinking screen*/
+  display: block;
+  padding: 11px;
+  font-size: 17px;
+  font-family: 'Roboto Mono', monospace;
+  border: 2px solid var(--secondary-color);
+  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+  margin-right: 50px;
+}
+.up a:hover{
+  background: var(--secondary-color);  /*box color when hovering over*/
+  color: var(--primary-color);
+  transition: 0.4s;
+}
+.down a{
+  background: transparent;
+  width: 50%;
+  float: right;
+  padding: 10px;
+  text-decoration: none;
+  color: var(--secondary-color);
+  width: auto;  /*to center when shrinking screen*/
+  display: block;
+  padding: 11px;
+  font-size: 17px;
+  font-family: 'Roboto Mono', monospace;
+  border: 2px solid var(--secondary-color);
+  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+  margin-left: 50px;
+}
+.down a:hover{
+  background: var(--secondary-color);  /*box color when hovering over*/
+  color: var(--primary-color);
+  transition: 0.4s;
+}
+/********************************/
+
+
+/*sections background colors*/
+section{
+    width: 100%;
+    float: left;
+    height: 100vh;
+    position: relative;
+}
+
+#home{
+   background-color: var(--primary-color);
+}
+
+#logreg{
+     background-color: var(--primary-color);
+}
+
+#quizzes{
+     background-color: var(--primary-color);
+}
+
+#score{
+     background-color: var(--primary-color);
+}
